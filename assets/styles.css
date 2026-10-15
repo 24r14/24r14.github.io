@@ -1250,6 +1250,140 @@ p {
     margin-bottom:45px
   }
 }
+/* Photo sections: the full image remains available from each photograph. */
+.section-aside {
+  color:var(--muted);
+  font-size:11px;
+}
+.kitchen-section {
+  border-top:1px solid var(--line);
+  padding-top:45px;
+}
+.kitchen-section .section-heading {
+  margin-bottom:18px;
+}
+.kitchen-intro {
+  max-width:660px;
+  font-size:15px;
+  margin-bottom:28px;
+}
+.photo-triptych {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.photo-triptych figure,.workshop-photos figure {
+  margin:0;
+  min-width:0;
+}
+.photo-triptych a,.workshop-photos a {
+  display:block;
+  background:var(--soft);
+}
+.photo-triptych img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+.photo-triptych figure:nth-child(2) img {
+  object-position:50% 28%;
+}
+.photo-triptych figcaption {
+  font-family:var(--serif);
+  font-size:18px;
+  line-height:1.45;
+  padding-top:17px;
+  color:var(--ink);
+}
+.photo-triptych figcaption span {
+  display:block;
+  font-family:var(--sans);
+  font-size:9px;
+  color:var(--green);
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.workshop-photos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:32px;
+}
+.workshop-photos img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  object-position:50% 70%;
+}
+.workshop-photos figcaption {
+  padding-top:12px;
+  font-size:11px;
+  line-height:1.7;
+  color:var(--muted);
+}
+.workshop-preview {
+  display:grid;
+  grid-template-columns:230px minmax(0,1fr);
+  align-items:center;
+  margin-top:24px;
+  gap:32px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--line);
+}
+.workshop-preview img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  object-position:50% 75%;
+}
+.workshop-preview h3 {
+  font-family:var(--serif);
+  font-size:28px;
+  margin-top:10px;
+}
+.workshop-preview p:not(.eyebrow) {
+  font-size:13px;
+  margin-top:10px;
+}
+.workshop-preview .text-link {
+  margin-top:17px;
+}
+@media(max-width:760px) {
+  .section-aside {
+    display:none;
+  }
+  .photo-triptych {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .photo-triptych img {
+    aspect-ratio:1/1;
+  }
+  .photo-triptych figcaption {
+    padding-top:13px;
+  }
+  .workshop-photos {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .workshop-preview {
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .workshop-preview img {
+    aspect-ratio:3/2;
+  }
+  .workshop-preview h3 {
+    font-size:26px;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto
