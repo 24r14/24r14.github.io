@@ -1384,6 +1384,48 @@ p {
     font-size:26px;
   }
 }
+.about-intro {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 270px;
+  align-items:center;
+  gap:60px;
+}
+.about-intro h1 { font-size:clamp(43px,5.2vw,72px); }
+.portrait { margin:0; }
+.portrait img { display:block; width:100%; height:auto; }
+.portrait figcaption,.activity-wide figcaption,.activity-pair figcaption {
+  padding-top:12px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+}
+.activity-wide { margin:38px 0 0; }
+.activity-wide img { display:block; width:100%; height:auto; }
+.activity-context { margin-top:38px; }
+.activity-pair {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:30px;
+  margin-top:28px;
+}
+.activity-pair figure { margin:0; }
+.activity-pair img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 35%;
+}
+.service-pair h3 { font:27px/1.2 var(--serif); margin:25px 0 14px; }
+.thank-you-note { margin-top:38px; padding:28px; background:var(--soft); }
+.thank-you-note h3 { font:27px/1.2 var(--serif); margin:8px 0 14px; }
+@media(max-width:760px) {
+  .about-intro { grid-template-columns:1fr; gap:30px; }
+  .portrait { width:min(250px,100%); }
+  .activity-pair { grid-template-columns:1fr; gap:32px; }
+  .thank-you-note { padding:22px; }
+}
 /* Research and activity detail added from the applicant's supplied resume. */
 .research-entry {
   padding:46px 0;
