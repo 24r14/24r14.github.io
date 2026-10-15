@@ -1420,11 +1420,13 @@ p {
 .service-pair h3 { font:27px/1.2 var(--serif); margin:25px 0 14px; }
 .thank-you-note { margin-top:38px; padding:28px; background:var(--soft); }
 .thank-you-note h3 { font:27px/1.2 var(--serif); margin:8px 0 14px; }
+.thank-you-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:35px; align-items:center; }
 @media(max-width:760px) {
   .about-intro { grid-template-columns:1fr; gap:30px; }
   .portrait { width:min(250px,100%); }
   .activity-pair { grid-template-columns:1fr; gap:32px; }
   .thank-you-note { padding:22px; }
+  .thank-you-layout { grid-template-columns:1fr; gap:25px; }
 }
 /* Research and activity detail added from the applicant's supplied resume. */
 .research-entry {
