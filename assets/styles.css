@@ -1593,3 +1593,10 @@ p {
     break-after:avoid
   }
 }
+
+/* Personal photographs with their original proportions. */
+.golf-gallery { grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); align-items:start; }
+.golf-gallery img { aspect-ratio:auto; }
+.service-pair details { margin-top:24px; }
+@media(max-width:760px) { .golf-gallery { grid-template-columns:1fr; } }
+
