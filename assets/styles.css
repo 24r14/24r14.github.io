@@ -1384,6 +1384,71 @@ p {
     font-size:26px;
   }
 }
+/* Research and activity detail added from the applicant's supplied resume. */
+.research-entry {
+  padding:46px 0;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:25px;
+}
+.research-entry h2 {
+  font-size:36px;
+  margin-top:9px;
+}
+.festival-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-items:center;
+  gap:55px;
+  margin-top:32px;
+}
+.festival-photo {
+  margin:0;
+}
+.festival-photo img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+.festival-photo figcaption {
+  font-size:11px;
+  line-height:1.7;
+  color:var(--muted);
+  padding-top:12px;
+}
+.festival-layout h3 {
+  font-family:var(--serif);
+  font-size:27px;
+  margin-bottom:14px;
+}
+.festival-layout .prose p+h3 {
+  margin-top:25px;
+}
+.festival-preview img {
+  object-position:50% 48%;
+}
+.resume-section article p+p {
+  margin-top:10px;
+}
+.results-band strong {
+  overflow-wrap:break-word;
+}
+@media(max-width:760px) {
+  .research-entry {
+    padding-block:35px;
+  }
+  .research-entry h2 {
+    font-size:30px;
+  }
+  .festival-layout {
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+}
+@media print {
+  .resume-section article p+p {
+    margin-top:5pt;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto
