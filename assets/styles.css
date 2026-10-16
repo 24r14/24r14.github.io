@@ -1600,3 +1600,6 @@ p {
 .service-pair details { margin-top:24px; }
 @media(max-width:760px) { .golf-gallery { grid-template-columns:1fr; } }
 
+/* Preserve the full frame in the earlier performance gallery. */
+.performance-archive img { aspect-ratio:4/3; object-fit:contain; background:#e9e8e1; }
+
